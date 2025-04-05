@@ -1,0 +1,17 @@
+# Git
+.git
+.gitignore
+
+# Build artifacts
+udp_server
+*.o
+
+# Log files
+*.log
+logs/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*~

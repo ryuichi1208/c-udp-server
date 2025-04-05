@@ -1,0 +1,19 @@
+# UDP Server Configuration
+server:
+  port: 8888
+  buffer_size: 1024
+  response_message: "Message received"
+
+# Socket Options
+socket_options:
+  reuse_addr: true # SO_REUSEADDR
+  receive_buffer: 8192 # SO_RCVBUF (bytes)
+  send_buffer: 8192 # SO_SNDBUF (bytes)
+  broadcast: false # SO_BROADCAST
+  ttl: 64 # IP_TTL
+  receive_timeout: 0 # SO_RCVTIMEO (seconds, 0 = no timeout)
+
+# Logging Configuration
+logging:
+  file: "udp_server.log"
+  enable: true
