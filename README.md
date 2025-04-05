@@ -2,9 +2,6 @@
 
 A simple UDP server implementation that loads configuration from YAML files and outputs logs in JSON format.
 
-![Build and Test](https://github.com/username/c-udp-server/workflows/Build%20and%20Test/badge.svg)
-![CodeQL](https://github.com/username/c-udp-server/workflows/CodeQL%20Analysis/badge.svg)
-
 ## Required Libraries
 
 - libyaml
