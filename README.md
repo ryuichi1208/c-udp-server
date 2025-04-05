@@ -2,6 +2,9 @@
 
 A simple UDP server implementation that loads configuration from YAML files and outputs logs in JSON format.
 
+![Build and Test](https://github.com/username/c-udp-server/workflows/Build%20and%20Test/badge.svg)
+![CodeQL](https://github.com/username/c-udp-server/workflows/CodeQL%20Analysis/badge.svg)
+
 ## Required Libraries
 
 - libyaml
@@ -32,6 +35,20 @@ make
 ```
 ./udp_server
 ```
+
+## Client Usage
+
+The client can be used to communicate with the server:
+
+```
+./udp_client [server_ip] [port] [message]
+```
+
+Default values:
+
+- server_ip: 127.0.0.1
+- port: 8888
+- message: "Hello, UDP Server!"
 
 ## Docker Support
 
@@ -75,3 +92,17 @@ logging:
   file: "udp_server.log" # Log file name
   enable: true # Enable/disable logging
 ```
+
+## CI/CD with GitHub Actions
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+1. **Build and Test**: Automatically compiles the code and verifies executables on push/PR to main branch
+2. **Docker Build**: Builds Docker image on push to main and tags, pushes to Docker Hub
+3. **CodeQL Analysis**: Performs security and code quality checks
+4. **Release Creation**: Automatically creates releases when a tag is pushed
+
+To use Docker Hub publishing:
+
+1. Add your Docker Hub username as a repository secret named `DOCKERHUB_USERNAME`
+2. Add your Docker Hub token as a repository secret named `DOCKERHUB_TOKEN`
